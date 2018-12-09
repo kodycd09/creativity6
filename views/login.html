@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+</head>
+        
+<body>  
+    <!-- <div id="mainHeader" class="large mainHeaderText">Login</div> -->
+    
+    <div class="form-container">
+        <form method="POST" action="/login">
+            <label>Username:</label>
+            <input class="txtInput" type="text" id="username" name="username" placeholder="Username"><br>
+            <label>Password:</label>
+            <input class="txtInput" type="password" id="password" name="password" placeholder="Password"><br>
+            <input type="submit" id="btnLogin" value="Login">
+        </form>
+    </div>
+    <a class="small" id="signup" href="/signup">Sign Up</a>
+    <hr>
+    <span id="loginMsg">
+    <%= msg %>
+    </span>
+    
+    <!-- <div class="divLogin">
+        <a href="Main.html"><div id="btnLogin">Login</div></a>
+    </div> -->
+</body>
+        
+</html>

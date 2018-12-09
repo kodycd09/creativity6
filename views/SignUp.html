@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simply Serve</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="js/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/MainController.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body ng-app="ssApp" ng-controller="ssCtrl">
+    <input id="txtFirstName" type="text" class="newAvailability" placeholder="First Name" style="top: 2%;"/>
+    <input id="txtLastName" type="text" class="newAvailability" placeholder="Last Name" />
+    <input id="txtEmail" type="text" class="newAvailability" placeholder="Email" />
+    <input id="txtUsername" type="text" class="newAvailability" placeholder="Username" />
+    <input id="txtPassword" type="text" class="newAvailability" placeholder="Password" />
+    
+    <div style="height: 24%; width: 90%; position: absolute; bottom: 3%; left: 50%; margin-left: -45%;">
+        <a href="Login.html" class="cancel aTag" style="height: 44%; width: 100%;">
+            <div style=" height: 100%; position: relative; top: 50%; transform: translateY(22%);">Cancel</div>
+        </a>
+        <a href="Verified.html" class="save aTag" style="height: 44%; position: absolute; width: 100%; bottom: 0;">
+            <div style="position: relative; top: 50%; transform: translateY(42%);">Send Verification Email</div>
+        </a>
+    </div>
+</body>
+</html>

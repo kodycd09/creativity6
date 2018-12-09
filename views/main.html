@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simply Serve</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <LINK REL="SHORTCUT ICON"
+       HREF="/images/simplyserve.ico">
+    
+    <script src="js/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/MainController.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            var scope = angular.element(document.getElementsByTagName("body")).scope();
+            $("#mainImage").height($("#mainImage").width());
+            $("#notify").height($("#notify").width());
+            $("#nav-icon").click(function(){
+                scope.toggleSettings();
+                $(this).toggleClass('open');
+                
+                var mr = $("#myRatings");
+                var bt = $("#buttonTable");
+                var mu = $("#mainUsername");
+                var ds = $("#divSettings");
+                if (!scope.settingsActive) {
+                    $(mr).show(); $(bt).show(); $(mu).show(); 
+                    $(ds).hide();
+                } else {
+                    $(mr).hide(); $(bt).hide(); $(mu).hide(); 
+                    $(ds).show();
+                }
+            });
+            $("#txtUsernameChange").keyup(function() {
+                scope.username = $("#txtUsernameChange").val();
+                scope.$apply();
+            });
+        });
+        
+    </script>
+</head>
+<body ng-app="ssApp" ng-controller="ssCtrl">
+    <a href="MyRatings.html">
+        <div id="myRatings">
+            <div id="star"></div>
+            <div id="numRatings">{{ myRatings.length }}</div>
+        </div>
+    </a>
+    <div id="settings">
+        <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div id="mainImage"></div>
+    <div id="mainUsername">@{{ username }}</div>
+    
+    <div id="buttonTable">
+        <table>
+            <tr>
+                <td>
+                    <a href="MyRequests.html" class="btnMain type1 aTag fLeft">
+                        <div class="vAlign" style="transform: translateY(70%);">My Requests</div>
+                    </a>
+                    <a href="GiveService.html" class="btnMain type1 aTag fRight">
+                        <div class="vAlign" style="transform: translateY(70%);">Give Service</div>
+                        <div id="notify">3</div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="RequestService.html" class="btnMain type2 aTag">
+                        <div class="vAlign" style="transform: translateY(65%);">Request Service</div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="Availability.html" class="btnMain type3 aTag">
+                        <div class="vAlign" style="transform: translateY(65%);">Set Availability</div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="divSettings" style="display: none;">
+        <input id="txtUsernameChange" type="text" ng-value="username" class="UsernameChange" placeholder="New username" />
+        <div id="divUsernameButtons">
+            <a href="Main.html" class="btnMain type1 aTag fLeft">
+                <div class="vAlign" style="transform: translateY(50%);">Cancel</div>
+            </a>
+            <a href="Main.html" class="btnMain type1 aTag fRight">
+                <div class="vAlign" style="transform: translateY(50%);">Confirm</div>
+            </a>
+        </div>
+        
+        <a href="Login.html" class="btnLogout type2 aTag">
+            <div class="vAlign" style="transform: translateY(21%);">Log out</div>
+        </a>
+    </div>
+    
+</body>
+</html>
+    
