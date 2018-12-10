@@ -10,7 +10,7 @@ router.get('/', function(req, res){
     console.log(req.session);
     if (req.session.user) {
       console.log("/ Route if user");
-      res.redirect('/main', {username: req.session.username,
+      res.render('index', {username: req.session.username,
                            msg:req.session.msg});
     } else {
       console.log("/ Route else user");

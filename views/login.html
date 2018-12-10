@@ -1,33 +1,26 @@
 <!doctype html>
-<html>
+<html ng-app="myApp">
     
 <head>
-    <title>User Login and Sessions</title>
+    <title>User Login</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
 </head>
         
-<body>  
-    <!-- <div id="mainHeader" class="large mainHeaderText">Login</div> -->
-    
+<body>
+    <h2 id="header" class="large">Login</h2>
     <div class="form-container">
         <form method="POST" action="/login">
-            <label>Username:</label>
             <input class="txtInput" type="text" id="username" name="username" placeholder="Username"><br>
-            <label>Password:</label>
             <input class="txtInput" type="password" id="password" name="password" placeholder="Password"><br>
-            <input type="submit" id="btnLogin" value="Login">
+            <input type="submit" class="btnPrimary" value="Login">
         </form>
     </div>
-    <a class="small" id="signup" href="/signup">Sign Up</a>
     <hr>
     <span id="loginMsg">
     <%= msg %>
     </span>
-    
-    <!-- <div class="divLogin">
-        <a href="Main.html"><div id="btnLogin">Login</div></a>
-    </div> -->
+    <a class="small signup" id="signUpLink" href="/signup">Sign Up</a>
 </body>
         
 </html>

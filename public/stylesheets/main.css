@@ -6,6 +6,7 @@
 body {
     background-color: #2B2D42 !important;
     text-align: center !important;
+    color: white;
 }
 
 #search {
@@ -22,10 +23,22 @@ body {
 #loginMsg {
     color:white;
 }
+
+h2 {
+    color: white;
+}
+
+a:visited { 
+    color:yellow;
 }
 
 .mainHeaderText {
     font-family: Courgette-Regular;
+    color:white;
+}
+
+#header {
+    color: white;
 }
 
 .large {
@@ -90,23 +103,22 @@ body {
         color: #666;
     }
 
-#btnLogin {
+.btnPrimary {
     width: 95%;
     height: 120px;
     color: #FFF;
     background-color: #D80032;
     font-size: 4.5em;
     border-radius: 10px;
-    margin-left: 2.5%;
     padding-top: 1%;
     text-decoration: none;
 }
 
-    #btnLogin:hover {
+    #btnPrimary:hover {
         cursor: pointer;
     }
 
-#signup {
+.signup {
     width: 100%;
     position: absolute;
     bottom: 10%;
@@ -564,7 +576,7 @@ table {
     font-size: 4.5em;
 }
 
-.cancel {
+.btnSecondary {
     background-color: #8D99AE;
     color: #FFF;
     height: 10%;

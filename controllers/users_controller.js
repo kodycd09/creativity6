@@ -7,6 +7,7 @@ function hashPW(pwd){
 }
 exports.signup = function(req, res){
   console.log("Begin exports.signup");
+  console.log(req.body)
   var user = new User({username:req.body.username});
   console.log("after new user exports.signup");
   user.set('hashed_password', hashPW(req.body.password));
